@@ -27,10 +27,10 @@ $database = new CreateDB("Productdb", "Producttb");
 <div class="container">
   <div class="row text-center py-5">
    <?php 
-    component("Product1", "$599", "$615", "product1.jpg");
-    component("Product2", "$219", "$300", "product1.jpg");
-    component("Product3", "$1000", "$1150", "product1.jpg");
-    component("Product4", "$80", "$95", "product1.jpg");
+    $result = $database->getData();
+    while($row = mysqli_fetch_assoc($result)){
+      component($row['product_name'], $row['product_price'], $row['product_image']);
+    }
    ?>
   </div>
 </div>

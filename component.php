@@ -1,6 +1,6 @@
 <?php 
 
-function component($productname, $productprice, $originalprice, $productimage){
+function component($productname, $productprice, $productimage){
   $element = "
   <div class=\"col-md-3 col-sm-6 my-3 my-md-0\">
       <form action=\"index.php\" method=\"post\">
@@ -19,7 +19,7 @@ function component($productname, $productprice, $originalprice, $productimage){
             </h6>
             <p class=\"card-text\">Some quick example text to build on card</p>
             <h5>
-            <small><s class=\"text-secondary\">$originalprice</s></small>
+            <small><s class=\"text-secondary\">$2000</s></small>
               <span class=\"price\">$productprice</span>
             </h5>
             <button type=\"submit\" name=\"add\" class=\"btn btn-warning my-3\">Add to Cart <i class=\"fas fa-shopping cart\"></i></button>
